@@ -27,4 +27,4 @@ jobs:
       - name: Deploy no Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: railway up
+        run: railway up --service cadastropf
