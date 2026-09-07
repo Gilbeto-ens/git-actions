@@ -20,3 +20,11 @@ jobs:
 
       - name: Rodar a suíte
         run: node --test
+
+      - name: Instalar Railway CLI
+        run: npm install -g @railway/cli
+
+      - name: Deploy no Railway
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: railway up --service git-actions
